@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-search-popup-lib": [
+        "dist/ng-search-popup-lib/ng-search-popup-lib",
+        "dist/ng-search-popup-lib"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

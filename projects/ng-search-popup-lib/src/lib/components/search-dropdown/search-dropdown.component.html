@@ -1,0 +1,6 @@
+<div [class]="containerClass" style="width: 100%;">
+    <button mat-button #button (click)="openDropdownDialog()" [color]="selected ? 'primary' : 'default'">
+        {{ getLabel() }}
+        <mat-icon>{{ clickoutHandler ? 'arrow_drop_down' : 'arrow_drop_up' }}</mat-icon>
+    </button>
+</div>

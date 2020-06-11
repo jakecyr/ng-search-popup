@@ -1,0 +1,17 @@
+<div class="dialog-container">
+    <mat-form-field class="search-container">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="filterItems($event)" />
+    </mat-form-field>
+
+    <div *ngIf="filteredItems && filteredItems.length > 0" class="option-container">
+        <div *ngFor="let option of filteredItems" class="option">
+            <span (click)="selectItem(option)">{{option}}</span>
+        </div>
+    </div>
+
+    <div *ngIf="filteredItems && filteredItems.length === 0">
+        <p>No results found</p>
+        <button mat-raised-button (click)="addNewValue()" color="primary">Add "{{searchString}}"</button>
+    </div>
+</div>
